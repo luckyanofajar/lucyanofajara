@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wisata Cirebon</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fcff;
+    }
+    header, footer {
+      background: #1E81B0;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background: #145DA0;
+      margin: 0;
+      padding: 0.5rem;
+    }
+    nav ul li {
+      margin: 0 1rem;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a.active {
+      color: #F6C90E;
+    }
+    .intro {
+      background: #eaf7ff;
+      text-align: center;
+      padding: 2rem 1rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .intro h2 {
+      color: #145DA0;
+      font-size: 2rem;
+    }
+    .intro p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: #444;
+    }
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .wisata-box {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+    }
+    .wisata-box img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      color: #145DA0;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      margin: 0.5rem 0 1rem;
+    }
+    .info-box {
+      background: #eaf7ff;
+      padding: 1rem;
+      border-left: 4px solid #1E81B0;
+      border-radius: 8px;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+      color: #333;
+      line-height: 1.5;
+    }
+    iframe {
+      width: 100%;
+      height: 250px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+    .komentar {
+      margin-top: 1rem;
+    }
+    .komentar textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+    .komentar button {
+      margin-top: 0.5rem;
+      background: #1E81B0;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .komen-list {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      background: #eef8ff;
+      padding: 0.5rem;
+      border-radius: 6px;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Wisata Cirebon</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="budaya.html">Budaya</a></li>
+        <li><a href="wisata.html" class="active">Wisata</a></li>
+        <li><a href="kuliner.html">Kuliner</a></li>
+        <li><a href="sejarah.html">Sejarah</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <h2>Selamat Datang di Destinasi Wisata Cirebon</h2>
+    <p>Temukan tempat-tempat terbaik untuk healing, menjelajah sejarah, hingga menikmati pemandangan alam yang memukau!</p>
+  </section>
+
+  <div class="container">
+    <div class="wisata-box">
+      <img src="asset/sunyaragi.webp" alt="Goa Sunyaragi">
+      <h3>Goa Sunyaragi</h3>
+      <p>Bekas tempat pertapaan bangsawan, dengan arsitektur batu karang yang unik.</p>
+      <div class="info-box">
+        <strong>Lokasi:</strong> Jl. Sunyaragi No.1, Cirebon<br>
+        <strong>Tiket Masuk:</strong> Rp15.000/orang
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.2664548152306!2d108.54019887403274!3d-6.737314365874096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1df257d4d4fb%3A0x8d4ea2ef1ff1103d!2sSunyaragi%20Cave%20Park!5e0!3m2!1sen!2sid!4v1750581000166!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="komentar">
+        <textarea placeholder="Tulis komentarmu..." oninput="this.nextElementSibling.disabled = !this.value"></textarea>
+        <button disabled onclick="kirimKomentar(this)">Kirim</button>
+        <div class="komen-list"></div>
+      </div>
+    </div>
+
+    <div class="wisata-box">
+      <img src="asset/bukit.webp" alt="Bukit Gronggong">
+      <h3>Bukit Gronggong</h3>
+      <p>Spot romantis malam hari, lihat citylight Cirebon dari ketinggian.</p>
+      <div class="info-box">
+        <strong>Lokasi:</strong> Kuningan - Cirebon, Jawa Barat<br>
+        <strong>Tiket Masuk:</strong> Gratis/orang
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.9071047191683!2d108.51920467403339!3d-6.78115936631422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1e9d4d3629d1%3A0x7ef0a6b8a94a3398!2sBukit%20Gronggong!5e0!3m2!1sen!2sid!4v1750581079173!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="komentar">
+        <textarea placeholder="Tulis komentarmu..." oninput="this.nextElementSibling.disabled = !this.value"></textarea>
+        <button disabled onclick="kirimKomentar(this)">Kirim</button>
+        <div class="komen-list"></div>
+      </div>
+    </div>
+  </div>
+
+   <div class="container">
+    <div class="wisata-box">
+      <img src="asset/Cirebon-Waterland-Ade-Irma-Suryani.jpg" alt="Cirebon Waterland Ade Irma Suryani">
+      <h3>Cirebon Waterland Ade Irma Suryani</h3>
+      <p>Rekreasi di Cirebon tak lengkap jika tak mengunjungi destinasi andalan kota udang ini. Adalah Cirebon Waterland Ade Irma Suryani, tempat yang kini ramai wisatawan. Dahulu, tempat ini adalah taman biasa yang terletak di tepi pantai utara Cirebon.</p>
+      <div class="info-box">
+        <strong>Lokasi:</strong> Jl. Yos Sudarso No.1, Lemahwungkuk, Kota Cirebon, Jawa Barat , Indonesia, 45111<br>
+        <strong>Tiket Masuk:</strong> Rp25.000-Rp40.000/orang
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.4279784260734!2d108.5707837740324!3d-6.7175137656763555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ee28633008ab7%3A0xa45b9be49b4a148d!2sWaterland%20Cirebon!5e0!3m2!1sen!2sid!4v1750580887637!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="komentar">
+        <textarea placeholder="Tulis komentarmu..." oninput="this.nextElementSibling.disabled = !this.value"></textarea>
+        <button disabled onclick="kirimKomentar(this)">Kirim</button>
+        <div class="komen-list"></div>
+      </div>
+    </div>
+
+    <div class="wisata-box">
+      <img src="asset/Danau-Setu-Patok.webp" alt="Danau Setu Patok">
+      <h3>Danau Setu Patok</h3>
+      <p>Danau Setu Patok terletak di Mundu, Cirebon, Jawa Barat. Tempat ini sering dipadati wisatawan, baik saat week end maupun akhir pekan. Banyak orang yang lebih memilih keindahan tempat wisata ini karena pesona keindahannya.</p>
+      <div class="info-box">
+        <strong>Lokasi:</strong> Kecamatan Mundu, Kabupaten Cirebon.<br>
+        <strong>Tiket Masuk:</strong> Gratis/orang
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15847.466207759906!2d108.55442243234693!3d-6.786089583854283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1c5e7d72248f%3A0xe9feb4e1db9cca2d!2sSetu%20Patok!5e0!3m2!1sen!2sid!4v1750580852393!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="komentar">
+        <textarea placeholder="Tulis komentarmu..." oninput="this.nextElementSibling.disabled = !this.value"></textarea>
+        <button disabled onclick="kirimKomentar(this)">Kirim</button>
+        <div class="komen-list"></div>
+      </div>
+    </div>
+  </div>
+
+   <div class="container">
+    <div class="wisata-box">
+      <img src="asset/Kampung-Batik-Trusmi.jpg" alt="Kampung Batik Trusmi">
+      <h3>Kampung Batik Trusmi</h3>
+      <p>adalah pusat industri batik di Kabupaten Cirebon, Jawa Barat, sekaligus sebagai tempat wisata seni batik dan kuliner. Kampung ini terletak di Plered, Cirebon, sekitar 4 (empat) kilometer di sebelah barat Kota Cirebon.</p>
+      <div class="info-box">
+        <strong>Lokasi:</strong> Kabupaten Cirebon, Jawa Barat<br>
+        <strong>Tiket Masuk:</strong> Gratis/orang
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.54405407837!2d108.50536917403231!3d-6.703248515534336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ee193b48be581%3A0xdaa49b48b19ca154!2sKawasan%20Wisata%20Batik%20Trusmi!5e0!3m2!1sen!2sid!4v1750580807938!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="komentar">
+        <textarea placeholder="Tulis komentarmu..." oninput="this.nextElementSibling.disabled = !this.value"></textarea>
+        <button disabled onclick="kirimKomentar(this)">Kirim</button>
+        <div class="komen-list"></div>
+      </div>
+    </div>
+
+    <div class="wisata-box">
+      <img src="asset/Hutan-Plangon.jpg" alt="Hutan Plangon">
+      <h3>Hutan Plangon</h3>
+      <p>Keramat Plangon merupakan salah satu objek wisata purbakala. Di sebelah utara Keramat Plangon dibatasi oleh kebun dan sawah, di sebelah timur dibatasi oleh Sungai Cipager, di sebelah selatan dibatasi oleh sawah, dan di sebelah barat dibatasi oleh jalan raya.</p>
+      <div class="info-box">
+        <strong>Lokasi:</strong> Desa Babakan, Kecamatan Sumber<br>
+        <strong>Tiket Masuk:</strong> Rp3.000/orang
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.9704609185005!2d108.48141417403335!3d-6.773449666236589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1ef8fec012c9%3A0x678f5f80928984c!2sWisata%20Kera%20Plangon!5e0!3m2!1sen!2sid!4v1750580764496!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="komentar">
+        <textarea placeholder="Tulis komentarmu..." oninput="this.nextElementSibling.disabled = !this.value"></textarea>
+        <button disabled onclick="kirimKomentar(this)">Kirim</button>
+        <div class="komen-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="wisata-box">
+      <img src="asset/Kampung-Sabin.jpg" alt="Kampung Sabin Cirebon">
+      <h3>Kampung Sabin Cirebon</h3>
+      <p>Kampung Sabin Cirebon merupakan salah satu destinasi wisata populer di Cirebon yang memang didesain seperti suasana di Bali. Ini dia alasan kenapa muncul sebuah jargon ‘Cirebon rasa Bali’.</p>
+      <div class="info-box">
+        <strong>Lokasi:</strong> Kota Baru Keandra,Jalan Nyi Ageng Serang,Kelurahan Sindangjawa,Kecamatan Dukupuntang,Kabupaten Cirebon,Jawa Barat<br>
+        <strong>Tiket Masuk:</strong> Rp35.000/orang
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7924.087841899482!2d108.44306537771001!3d-6.764499500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1f382ebca813%3A0xad86416fd9dc8336!2sKota%20Baru%20Keandra%20Sumber!5e0!3m2!1sen!2sid!4v1750580620701!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="komentar">
+        <textarea placeholder="Tulis komentarmu..." oninput="this.nextElementSibling.disabled = !this.value"></textarea>
+        <button disabled onclick="kirimKomentar(this)">Kirim</button>
+        <div class="komen-list"></div>
+      </div>
+    </div>
+
+    <div class="wisata-box">
+      <img src="asset/Batu-Lawang.jpg" alt="Batu Lawang">
+      <h3>Batu Lawang</h3>
+      <p>Yang ditawarkan dari tempat wisata ini adalah pemandangan alamnya yang memukau. Semua itu dipadukan dengan berbagai spot foto cantik yang bisa Anda manfaatkan untuk mengabadikan momen. Selain itu, harga tiket masuknya juga murah meriah. Tak heran kalau tempat wisata ini jadi favorit para keluarga yang ingin wisata akhir pekan.</p>
+      <div class="info-box">
+        <strong>Lokasi:</strong> Cupang - Kecamatan Gempol, Cirebon.<br>
+        <strong>Tiket Masuk:</strong> Rp7.000/orang
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.344777071044!2d108.37817147403267!3d-6.727720365778222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6edf7700000001%3A0x6184c1b9c1112bde!2sBatu%20Lawang%20Cirebon!5e0!3m2!1sid!2sid!4v1750580315553!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="komentar">
+        <textarea placeholder="Tulis komentarmu..." oninput="this.nextElementSibling.disabled = !this.value"></textarea>
+        <button disabled onclick="kirimKomentar(this)">Kirim</button>
+        <div class="komen-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; Computer Education UMC</p>
+  </footer>
+
+  <script>
+    function kirimKomentar(btn) {
+      const textarea = btn.previousElementSibling;
+      const komentar = textarea.value.trim();
+      if (!komentar) return;
+      const list = btn.nextElementSibling;
+      const p = document.createElement("p");
+      p.textContent = `• ${komentar}`;
+      list.appendChild(p);
+      textarea.value = "";
+      btn.disabled = true;
+    }
+  </script>
+</body>
+</html>

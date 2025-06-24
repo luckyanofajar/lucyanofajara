@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kuliner Khas Cirebon</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fcff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #1E81B0;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background-color: #145DA0;
+      margin: 0;
+      padding: 0.5rem;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+    }
+
+    nav ul li a:hover {
+      color: #1E81B0;
+      border-radius: 5px;
+    }
+
+    nav ul li a.active {
+      color: #F6C90E;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #145DA0;
+      margin-bottom: 0.5rem;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+      color: #1E81B0;
+    }
+
+    .card-content p {
+      margin-bottom: 0.8rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 240px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #1E81B0;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      iframe {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kuliner Khas Cirebon</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="budaya.html">Budaya</a></li>
+        <li><a href="wisata.html">Wisata</a></li>
+        <li><a href="kuliner.html" class="active">Kuliner</a></li>
+        <li><a href="sejarah.html">Sejarah</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Rasakan Kenikmatan Kuliner Cirebon</h2>
+    <p class="intro">Setiap gigitan menyimpan cerita. Yuk kenali lebih dekat makanan khas Cirebon yang menggoda selera dan kaya rasa lokal!</p>
+
+    <section class="grid">
+      <div class="card">
+        <img src="asset/tahu.jpg" alt="Tahu Gejrot">
+        <div class="card-content">
+          <h3>Tahu Gejrot</h3>
+          <p>Tahu goreng disiram kuah khas bawang, gula merah dan cabai. Segar dan pedas manis.</p>
+          <iframe src="https://www.youtube.com/embed/d8v2rmDdJ3c?si=9-waF70CKVmN1Rbm" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="asset/empal.webp" alt="Empal Gentong">
+        <div class="card-content">
+          <h3>Empal Gentong cirebon</h3>
+          <p>Soto gurih bersantan, dimasak dalam gentong tanah liat, isi daging sapi dan jeroan.</p>
+          <iframe src="https://www.youtube.com/embed/n6mPBKp1-PE?si=1TSD0OZmOeWE-LDB" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="asset/lengko.webp" alt="Nasi Lengko">
+        <div class="card-content">
+          <h3>Nasi Lengko</h3>
+          <p>Campuran tahu, tempe, tauge dan sambal kacang. Cocok untuk pecinta sayur dan vegetarian.</p>
+          <iframe src="https://www.youtube.com/embed/dtmkeWEbkZY?si=4yvO2ah6VTYzzmUq" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="asset/doncang.webp" alt="Docang">
+        <div class="card-content">
+          <h3>Docang cirebon</h3>
+          <p>Terbuat dari campuran potongan lontong, parutan kelapa, daun singkong, daun kucai, toge, dan kerupuk.</p>
+          <iframe src="https://www.youtube.com/embed/smaFUaLE7M0?si=RYc8NAFjMbHNvvON" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="asset/mi.webp" alt="Mi Khas Cirebon">
+        <div class="card-content">
+          <h3>Mie koclok Cirebon</h3>
+          <p>MI basah yang disiram dengan kuah kaldu ayam kental serta dilengkapi dengan suwiran ayam dan taburan bawang goreng.</p>
+          <iframe src="https://www.youtube.com/embed/bLyDZ4kvQEo?si=Gd7SRras5zQtGZpE" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="asset/kerupuk.webp" alt="Kerupuk Melarat">
+        <div class="card-content">
+          <h3>Kerupuk Melarat</h3>
+          <p>Kerupuk digoreng tanpa minyak, hanya menggunakan pasir panas. Jadi camilan khas dan unik!</p>
+          <iframe src="https://www.youtube.com/embed/hTkPc_v8RQA?si=Fl-bZuED_XfAzuCo" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="asset/sate.jpg" alt="Kerupuk Melarat">
+        <div class="card-content">
+          <h3>Sate Kalong</h3>
+          <p>Sate yang sebenarnya terbuat dari daging kerbau, tetapi disebut sate kalong karena dijajakan pada malam hari.</p>
+          <iframe src="https://www.youtube.com/embed/wj4Jzd496u0?si=Ze32dqWCCehwviG_" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="asset/tape.jpg" alt="Kerupuk Melarat">
+        <div class="card-content">
+          <h3>Tape Ketan</h3>
+          <p>Makanan fermentasi dari ketan, biasanya berwarna hijau.</p>
+          <iframe src="https://www.youtube.com/embed/zg1Drvm3MZs?si=oWcOALWxk0BR4bwC" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="asset/jamblang.jpg" alt="Kerupuk Melarat">
+        <div class="card-content">
+          <h3>Nasi Jamblang</h3>
+          <p>Makanan fermentasi dari ketan, biasanya berwarna hijau.</p>
+          <iframe src="https://www.youtube.com/embed/7Zy5NGA-iT0?si=Tjlse8Kq-ibFmqP_" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Computer Education UMC</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Budaya Cirebon</title>
+   <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5faff;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    header {
+      background-color: #1E81B0;
+      color: white;
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background-color: #145DA0;
+      padding: 0.5rem;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+    }
+
+    nav ul li a:hover {
+      color: #F6C90E;
+    }
+
+    nav ul li a.active {
+      color: #F6C90E;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #eaf7ff;
+      border-bottom: 1px solid #ccc;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    .intro.fade-in.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .intro h2 {
+      color: #145DA0;
+      margin-bottom: 0.5rem;
+    }
+
+    .intro p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .judul-budaya {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      background: linear-gradient(to bottom, #f5faff, #ffffff);
+      animation: fadeIn 1.2s ease;
+    }
+
+    .judul-budaya h2 {
+      color: #1E81B0;
+      font-size: 1.7rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .judul-budaya p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .galeri {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .galeri .item {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .galeri .item img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 3;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+    }
+
+    .galeri .item p {
+      padding: 0.75rem;
+      font-weight: bold;
+      color: #1E81B0;
+      text-align: center;
+    }
+
+    .galeri .item:hover {
+      transform: translateY(-5px);
+    }
+
+    .penjelasan {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border-radius: 10px;
+      background: #e9f6ff;
+      border-left: 4px solid #1E81B0;
+      display: none;
+    }
+
+    .penjelasan h3 {
+      margin-top: 0;
+      color: #145DA0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      margin-top: 1rem;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .penutup {
+      margin-top: 3rem;
+      padding: 2.5rem 1rem;
+      background: linear-gradient(to top, #f5faff, #ffffff);
+      text-align: center;
+      border-top: 2px dashed #1E81B0;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .penutup h2 {
+      color: #145DA0;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .penutup p {
+      max-width: 750px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #1E81B0;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      .galeri {
+        grid-template-columns: 1fr;
+      }
+
+      iframe {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cirebon, Dalam Sentuhan Budaya</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="budaya.html" class="active">Budaya</a></li>
+        <li><a href="wisata.html">Wisata</a></li>
+        <li><a href="kuliner.html">Kuliner</a></li>
+        <li><a href="sejarah.html">Sejarah</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro fade-in">
+      <h2>Selamat Datang di Ragam Budaya Cirebon</h2>
+      <p>Dari irama gamelan yang merdu hingga tarian topeng penuh makna, Cirebon menyimpan warisan budaya yang luar biasa. Yuk, jelajahi beragam kesenian, batik, dan keraton yang jadi identitas khas Tanah Wali!</p>
+    </section>
+
+    <section class="judul-budaya">
+      <h2>🎭 Inilah Beragam Tarian Budaya Cirebon</h2>
+      <p>Hayok kenali lebih dalam warisan seni yang telah hidup berabad-abad di tanah Cirebon. Saatnya kita tidak hanya melihat, tapi ikut merasakan semangatnya!</p>
+    </section>
+
+    <div class="galeri">
+      <div class="item" onclick="tampilkan('topeng')"><img src="asset/tari.jpg" alt="Tari Topeng"><p>Tari Topeng</p></div>
+      <div class="item" onclick="tampilkan('sintren')"><img src="asset/tari sintren.jpg" alt="Tari Sintren"><p>Tari Sintren</p></div>
+      <div class="item" onclick="tampilkan('jaran')"><img src="asset/jaran.jpg" alt="Jaran Lumping"><p>Jaran Lumping</p></div>
+      <div class="item" onclick="tampilkan('Tayub')"><img src="asset/tari tayub.jpg" alt="Tari Tayub"><p>Tari Tayub</p></div>
+      <div class="item" onclick="tampilkan('wayang')"><img src="asset/wayang2.jpg" alt="Wayang Kulit"><p>Wayang Kulit</p></div>
+      <div class="item" onclick="tampilkan('wayang golek')"><img src="asset/wayang golek.jpg" alt="Wayang Golek"><p>Wayang Golek</p></div>
+      <div class="item" onclick="tampilkan('Wayang Orang')"><img src="asset/wayang orang.jpg" alt="Wayang Orang"><p>Wayang Orang</p></div>
+      <div class="item" onclick="tampilkan('Wayang beber')"><img src="asset/wayang beber2.jpg" alt="Wayang Beber"><p>Wayang Beber</p></div>
+      <div class="item" onclick="tampilkan('gamelan denggung')"><img src="asset/denggung.jpg" alt="gamelan denggung"><p>Gamelan denggung</p></div>
+      <div class="item" onclick="tampilkan('gamelan renteng')"><img src="asset/renteng.jpg" alt="gamelan renteng"><p>Gamelan renteng</p></div>
+      <div class="item" onclick="tampilkan('gamelan pelog')"><img src="asset/pelog2.jpg" alt="gamelan pelog"><p>Gamelan pelog</p></div>
+      <div class="item" onclick="tampilkan('gamelan selendro')"><img src="asset/selendro.jpg" alt="gamelan selendro"><p>Gamelan selendro</p></div>
+    </div>
+
+    <div class="penjelasan" id="info"></div>
+
+    <section class="penutup">
+      <h2>🌟 Budaya Tak Sekadar Warisan, Tapi Jati Diri</h2>
+      <p>Dari gerakan tari hingga alunan gamelan, Cirebon mengajarkan kita bahwa budaya bukan sekadar tontonan, tapi pengalaman. Mari terus jaga dan hayati setiap warisan yang ada — karena di sanalah jiwa kita sebagai bangsa tinggal.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Computer Education UMC</p>
+  </footer>
+
+  <script>
+    function tampilkan(id) {
+      const info = document.getElementById("info");
+      let isi = "";
+
+      switch(id) {
+        case 'topeng':
+          isi = `<h3>Tari Topeng Cirebon</h3><p>Tari tradisional yang menampilkan karakter manusia lewat warna dan bentuk topeng. Dikenal karena gerakannya yang filosofis dan penuh makna.</p><iframe src="https://www.youtube.com/embed/FZCPTeIYpRQ" allowfullscreen></iframe>`; break;
+        case 'sintren':
+          isi = `<h3>Tari Sintren</h3><p>Tarian tradisional yang bernuansa magis dan sering dipentaskan dalam berbagai acara, khususnya di Cirebon.</p><iframe src="https://www.youtube.com/embed/0SLHa1Lpk0s" allowfullscreen></iframe>`; break;
+        case 'jaran':
+          isi = `<h3>Jaran Lumping</h3><p>Tarian tradisional Jawa yang menampilkan sekelompok prajurit menunggang kuda. Menggambarkan perjuangan Raden Patah, dibantu Sunan Kalijaga.</p><iframe src="https://www.youtube.com/embed/I8QtenvbnW0" allowfullscreen></iframe>`; break;
+        case 'Tayub':
+          isi = `<h3>Tari Tayub</h3><p>Tari Tayub dipercaya berasal dari zaman Kerajaan Singosari dan memiliki kaitan dengan upacara-upacara tradisional.</p><iframe src="https://www.youtube.com/embed/XG1Hx8Y-Hug?si=UAHuvdQOUmOcLCGU" allowfullscreen></iframe>`; break;
+        case 'wayang':
+          isi = `<h3>Wayang Kulit</h3><p>Seni pertunjukan klasik dengan tokoh-tokoh pewayangan yang menyampaikan kisah sarat nilai.</p><iframe src="https://www.youtube.com/embed/TjTdK3Mm5Kc" allowfullscreen></iframe>`; break;
+        case 'wayang golek':
+          isi = `<h3>Wayang Golek</h3><p>Boneka kayu yang dimainkan dengan tangan, populer di Cirebon dan Sunda. Penuh nilai moral dan hiburan.</p><iframe src="https://www.youtube.com/embed/WvJkfZgH-08?si=rS6e_ca6CiCC8Rhj" allowfullscreen></iframe>`; break;
+        case 'Wayang Orang':
+          isi = `<h3>Wayang Orang</h3><p>Pementasan wayang oleh aktor manusia dengan kostum dan gerakan khas. Ceritanya berasal dari Mahabharata dan Ramayana.</p><iframe src="https://www.youtube.com/embed/Rzf6m4LAqCI?si=2Au2vOHbZOpuDE-_" allowfullscreen></iframe>`; break;
+        case 'Wayang beber':
+          isi = `<h3>Wayang Beber & Gamelan Cirebon</h3><p>Wayang Beber adalah cerita bergambar yang digelar seperti gulungan. Gamelan Cirebon menjadi pengiring utama yang sarat makna spiritual dan nilai luhur.</p><iframe src="https://www.youtube.com/embed/RcSCfphc_Ts?si=Ni6cOnU3eF_f25BT" allowfullscreen></iframe>`; break;
+         case 'gamelan denggung':
+          isi = `<h3>Gamelan denggung</h3><p>Gamelan denggung adalah salah satu perangkat gamelan pusaka yang ada di Keraton Kacirebonan, Cirebon. Gamelan ini memiliki sejarah panjang dan dipercaya memiliki kekuatan magis, khususnya dalam memohon hujan saat musim kemarau. Usianya diperkirakan mencapai lebih dari 500 tahun dan berasal dari Pajajaran.</p><iframe src="https://www.youtube.com/embed/czVhlkfPjk8?si=avXGNilSTgexIf-X" allowfullscreen></iframe>`; break;
+        case 'gamelan renteng':
+          isi = `<h3>Gamelan renteng</h3><p>Gamelan renteng adalah jenis gamelan Sunda yang sudah tua, diperkirakan ada sejak abad ke-16. Gamelan ini dikenal juga dengan nama "gong renteng" dan tersebar di berbagai wilayah Jawa Barat, termasuk Cirebon dan Indramayu. Di Indramayu, gamelan renteng biasa dimainkan pada acara-acara adat seperti "H-1" atau hari dodol (dina ndodol) pada pesta hajatan masyarakat atau syukuran.</p><iframe src="https://www.youtube.com/embed/e1qtmnNoMWQ?si=8I3is8IjNr50NF6Y" allowfullscreen></iframe>`; break;
+        case 'gamelan pelog':
+          isi = `<h3>Gamelan pelog</h3><p>Pelog adalah satu dari dua tangga nada (dalam literatur sering disebut juga sebagai "laras") pokok dipakai dalam musik gamelan asli dari masyarakat di Pulau Bali (juga sebagian Pulau Lombok) dan Pulau Jawa di Indonesia.</p><iframe src="https://www.youtube.com/embed/0iOfNDuXAJQ?si=V_AFn8gELrNt_uet" allowfullscreen></iframe>`; break;
+        case 'gamelan selendro':
+          isi = `<h3>Gamelan selendro</h3><p>Gamelan Cirebon adalah ansambel musik tradisional Cirebon yang memainkan alat musik dengan dipukul. Gamelan Cirebon telah ada sejak zaman kerajaan Demak dan diperkirakan diperkenalkan oleh Sunan Gunung Jati. Jenis gamelan Cirebon antara lain gamelan sekat, siketuyung, dan renteng.</p><iframe src="https://www.youtube.com/embed/7tVs36XQG9E?si=K7oVSVKa4Ve6N1gV" allowfullscreen></iframe>`; break;
+      }
+
+      info.innerHTML = isi;
+      info.style.display = "block";
+      info.scrollIntoView({ behavior: "smooth" });
+    }
+
+    window.addEventListener("scroll", () => {
+      const intro = document.querySelector(".intro");
+      const top = intro.getBoundingClientRect().top;
+      if (top < window.innerHeight - 50) {
+        intro.classList.add("active");
+      }
+    });
+  </script>
+</body>
+</html>
